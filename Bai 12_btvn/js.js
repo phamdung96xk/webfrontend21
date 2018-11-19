@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	var dem=1;
 $('#button2').on('click',function(){
 			
 
@@ -39,12 +40,16 @@ $('#button2').on('click',function(){
 				$('.profile1').css('color','white');
 				
 				$('.account1').css('background-color','blue');
-				
+				dem++;
+		
 				
 				return true;
 			}
+
 		})
+
 $('.button1-1').on('click',function(){
+
 				$('.div1').show();
 				$('.div2').hide(1000);
 				$('.button0').show(1000);
@@ -57,6 +62,7 @@ $('.button1-1').on('click',function(){
 			
 			})
 	$('.button2-1').on('click',function(){
+		
 			var name2 = $('#name-2').val();
 			var surname2 =$('#surname-2').val();
 			var email2 = $('#email-2').val();
@@ -105,7 +111,8 @@ $('.button1-1').on('click',function(){
 				$('.warning1').css('background-color','blue');
 				$('.warning1').css('color','white');
 				$('.profile1').css('background-color','blue');
-			
+				dem++;
+		
 			}
 		})
 	
@@ -123,7 +130,7 @@ $('.button1-1').on('click',function(){
 			})
 
 		$('.button2-2').on('click',function(){
-				
+			
 				$('.label3').innerHTML ='';
 				$('.div4').show(1000);
 				$('.div3').hide(1000);
@@ -135,10 +142,13 @@ $('.button1-1').on('click',function(){
 				$('.profile1').css('background-color','blue');
 				$('.finish1').css('color','white');
 				$('.finish1').css('opacity','1');
+					dem++;
+		
 				
 			})
 		
 		$('.button2-3').on('click',function(){
+			
 			var acceptTerms2 =$('#acceptTerms-2').val();
 			if($('#acceptTerms-2').is(':checked')) {
 					alert('Bạn đã đăng ký thành viên thành công.');
@@ -148,6 +158,8 @@ $('.button1-1').on('click',function(){
 					$('.errorend').show();
 					alert('Đăng ký thất bại,vui lòng đồng ý các điều khoản trước khi kết thúc đăng ký.');
 				}
+				
+		
 		})
 		$('.button1-3').on('click',function(){
 				$('.div3').show(1000);
@@ -161,7 +173,145 @@ $('.button1-1').on('click',function(){
 
 			
 			})
-	})
+		$('.account1').on('click',function(){
+			
+			
+				
+				if (dem == 2 || dem == 3 || dem == 4) {
+
+
+				$('.label1').innerHTML ='';
+				$('.div1').show(1000);
+				$('.div2').hide(1000);
+				$('.div3').hide(1000);
+				$('.div4').hide(1000);
+				$('.button0').show();
+				$('.button3').hide();
+				$('.button4').hide();
+				$('.button5').hide();
+				$('.account1').css('opacity','1');
+				$('.profile1').css('opacity','0.4');
+				$('.warning1').css('opacity','0.4');
+				$('.finish1').css('opacity','0.4');
+				$('.account1').css('background-color','blue');
+				$('.account1').css('color','white');
+				
+				$('.account1').css('background-color','blue');
+				}else{
+					return false;
+				}
+				
+				
+			})
+			
+			$('.profile1').on('click',function(){
+			
+				
+			
+				if ( dem == 2 || dem == 3 || dem == 4) {
+				
+				$('.label1').innerHTML ='';
+				$('.div2').show(1000);
+				$('.div1').hide(1000);
+				$('.div3').hide(1000);
+				$('.div4').hide(1000);
+				$('.button0').hide();
+				$('.button3').show();
+				$('.button4').hide();
+				$('.button5').hide();
+				$('.account1').css('opacity','0.4');
+				$('.profile1').css('opacity','1');
+				$('.warning1').css('opacity','0.4');
+				$('.finish1').css('opacity','0.4');
+				$('.profile1').css('background-color','blue');
+				$('.profile1').css('color','white');
+				
+				$('.profile1').css('background-color','blue');
+				}else{
+					return false;
+				}
+				
+				
+			})
+			$('.warning1').on('click',function(){
+			
+			
+				if (  dem==3 || dem == 4) {
+				
+				$('.label1').innerHTML ='';
+				$('.div3').show(1000);
+				$('.div1').hide(1000);
+				$('.div2').hide(1000);
+				$('.div4').hide(1000);
+				$('.button0').hide();
+				$('.button4').show();
+				$('.button3').hide();
+				$('.button5').hide();
+				$('.account1').css('opacity','0.4');
+				$('.profile1').css('opacity','0.4');
+				$('.warning1').css('opacity','1');
+				$('.finish1').css('opacity','0.4');
+				$('.warning1').css('background-color','blue');
+				$('.warning1').css('color','white');
+				
+				$('.warning1').css('background-color','blue');
+				$('.account1').css('background-color','blue');
+				$('.account1').css('color','white');
+				
+				$('.account1').css('background-color','blue');
+				$('.profile1').css('background-color','blue');
+				$('.profile1').css('color','white');
+				
+				$('.profile1').css('background-color','blue');
+				}else{
+					return false;
+				}
+				
+				
+			})
+			$('.finish1').on('click',function(){
+					
+					if (  dem == 4) {
+
+				
+				$('.label1').innerHTML ='';
+				$('.div4').show(1000);
+				$('.div1').hide(1000);
+				$('.div2').hide(1000);
+				$('.div3').hide(1000);
+				$('.button5').show();
+				$('.button0').hide();
+				$('.button3').hide();
+				$('.button4').hide();
+				$('.account1').css('opacity','0.4');
+				$('.profile1').css('opacity','0.4');
+				$('.warning1').css('opacity','0.4');
+				$('.finish1').css('opacity','1');
+				$('.finish1').css('background-color','blue');
+				$('.finish1').css('color','white');
+				
+				$('.finish1').css('background-color','blue');
+				$('.account1').css('background-color','blue');
+				$('.account1').css('color','white');
+				
+				$('.account1').css('background-color','blue');
+				$('.profile1').css('background-color','blue');
+				$('.profile1').css('color','white');
+				
+				$('.profile1').css('background-color','blue');
+				$('.warning1').css('background-color','blue');
+				$('.warning1').css('color','white');
+				
+				$('.warning1').css('background-color','blue');
+				}else{
+					return false;
+				}
+				
+			})
+
+			
+			})
+	
 		
 		
 
